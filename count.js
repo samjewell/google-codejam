@@ -19,11 +19,16 @@ process.stdin.pipe(require('split')())
   .on('end', checkFinished);
 
 function count(num) {
-  var digitsSeenSoFar = num.split('').sort();
+  if (num == 0) return 'INSOMNIA';
+  var newNum = num;
+  var digitsSeenSoFar = _.uniq(newNum.split('').sort());
 
-  // console.log('uniqed', _.uniq([1,2,1,3,4,4,5,6, 7, 8 ]));
-  debugger;
-  
+  while (digitsSeenSoFar.length < 10) {
+    newNum = Number(newNum) + Number(num) + '';
+    digitsSeenSoFar = _.uniq(newNum.split('').concat(digitsSeenSoFar).sort());
+    debugger;
+  }
+  return newNum;  
 }
 
 function processLine(line) {
@@ -44,5 +49,3 @@ function checkFinished() {
     console.log('ERROR:- wrong number of cases processed');
   }
 }
-
-console.log(_.uniq([1,2,1,3]))

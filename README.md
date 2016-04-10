@@ -42,7 +42,9 @@ node-debug count.js < A-small-practice.in
 
 ## ToDo
 
-- Start git. Commit to github.
-- get lodash into the repo
-- use babel for transpilation, with watcher (https://babeljs.io/docs/usage/cli/)
-- switch on linting - make this an example repo for all katas
+- [x] Start git
+- [ ] Commit to github.
+- [x] get lodash into the repo
+- [ ] understand why lodash not available in closure if not used in closure. Compare to developing in the browser, rather than in node.js
+- [ ] use babel for transpilation, with watcher (https://babeljs.io/docs/usage/cli/)
+- [ ] switch on linting - make this an example repo for all katas
