@@ -1,0 +1,21 @@
+{
+  "name": "counting-sheep",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": {
+      "version": "4.9.0",
+      "from": "lodash@latest",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.9.0.tgz"
+    },
+    "split": {
+      "version": "1.0.0",
+      "from": "split@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/split/-/split-1.0.0.tgz"
+    },
+    "through": {
+      "version": "2.3.8",
+      "from": "through@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/through/-/through-2.3.8.tgz"
+    }
+  }
+}

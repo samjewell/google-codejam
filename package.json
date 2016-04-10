@@ -1,0 +1,19 @@
+{
+  "name": "counting-sheep",
+  "version": "1.0.0",
+  "description": "Google Codejam, first challenge 2016",
+  "main": "count.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Jewell",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash": "^4.9.0",
+    "split": "^1.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.9.0",
+    "split": "^1.0.0"
+  }
+}
