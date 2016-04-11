@@ -1,0 +1,52 @@
+// var readline = require('readline');
+// var rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+//   terminal: false
+// });
+
+// rl.on('line', function(line){
+//     console.log(line);
+// })
+
+var _ = require('lodash');
+
+var numCases = 0;
+var thisCase = 0;
+
+process.stdin.pipe(require('split')())
+  .on('data', processLine)
+  .on('end', checkFinished);
+
+function flip(stack) {
+  stackArr = stack.split('');
+  numFlips = 0;
+  var lastCake = '+';
+  while (stackArr.length > 0) {
+    nextCake = stackArr.pop();
+    if (nextCake !== lastCake) {
+      numFlips += 1;
+    }
+    lastCake = nextCake;
+  }
+  return numFlips;
+}
+
+function processLine(line) {
+  if (numCases == 0) {
+    numCases = Number(line);
+  } else if (line) {
+    thisCase++;
+    console.log('Case #' + thisCase + ': ' + flip(line));
+  }
+}
+
+function checkFinished() {
+  console.log('last case was ', thisCase);
+  console.log('total cases ', numCases);
+  if (thisCase == numCases) {
+    console.log('congrats, right number of cases processed');
+  } else {
+    console.log('ERROR:- wrong number of cases processed');
+  }
+}

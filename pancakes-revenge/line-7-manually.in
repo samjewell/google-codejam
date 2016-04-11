@@ -1,0 +1,50 @@
+
+
+
+
+
+
+++-++++---
+
+----+-----
++++++-----
+----------
+++++++++++
+
+
+OR
+
+---++++---
++++----+++
+-------+++
+++++++++++
+
+
+Add minuses to the RIGHT, starting from the left.
+
+Logic is something like this:
+
+- chomp minuses from the RIGHT.
+  Leaves us with
+  ++-++++
+
+- if 
+
+
+
+
+
+Things we're aiming to do:
+
+1. Turn pluses on the LEFT into minuses
+   - the whole group up until the nearest plus
+   - reduce the 'entropy' by 1
+
+2. Remove minuses on the RIGHT into pluses
+   - Flip the whole group at the end
+
+--------------------------------------------------------
+3. Rule is:
+   - Every switch between -/+ needs 1 flip
+   - If the LAST in the row is -, we need an extra flip.
+--------------------------------------------------------
